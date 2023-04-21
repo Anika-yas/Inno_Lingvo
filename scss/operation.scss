@@ -1,0 +1,121 @@
+.operation {
+    // .operation__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 180px 15px 120px;
+        @include adaptiveValue("padding-top", 180, 60, 1920, 767, 1);
+    }
+}
+.operation-block {
+    align-items: center;
+    &:not(:last-child) {
+        margin-bottom: 60px;
+    }
+    display: flex;
+    // .operation-block__text
+    &__text {
+        flex: 1 1 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    // .operation-block__title
+    &__title {
+        color: #1D1D1D;
+        font-weight: 900;
+        font-size: 40px;
+        @include adaptiveValue("font-size", 40, 32, 1920, 991, 1);
+        @include adaptiveValue("font-size", 32, 22, 992, 320, 1);
+        line-height: math.div( 49, 40);
+        &:not(:last-child) {
+            margin-bottom: 23px;
+        }
+    }
+    // .operation-block__subtitle
+    &__subtitle {
+        color: #535353;
+        font-weight: 500;
+        font-size: 20px;
+        @include adaptiveValue("font-size", 20, 18, 1920, 991, 1);
+        @include adaptiveValue("font-size", 18, 14, 991, 320, 1);
+        line-height: math.div( 30, 20);
+        &:not(:last-child) {
+            margin-bottom: 39px;
+        }
+    }
+    // .operation-block__item
+    &__item {
+        padding-left: 107px;
+        @include adaptiveValue("padding-left", 107, 80,991, 767, 1);
+        min-height: 84px;
+        @include adaptiveValue("min-height", 84, 60, 991, 767, 1);
+        background-size: 84px;
+        @include adaptiveValue("background-size", 84, 60, 991, 767, 1);
+        background-repeat: no-repeat;
+        &:not(:last-child) 
+        {
+            margin-bottom: 30px;
+            @include adaptiveValue("margin-bottom", 30, 15, 991, 767, 1);
+        }
+        &:nth-child(1) {
+            background-image: url(../img/operation/number-1.svg);
+        }
+        &:nth-child(2) {
+            background-image: url(../img/operation/number-2.svg);
+        }
+        &:nth-child(3) {
+            background-image: url(../img/operation/number-3.svg);
+        }
+    }
+    // .operation-block__visual
+    &__visual {
+        flex: 1 1 50%;
+        display: flex;
+        justify-content: center;
+        @media (max-width:$mobile){
+            display: none;
+        }
+    }
+    // .operation-block__picture
+    &__picture {
+        flex: 0 1 380px;
+        @media (max-width: 1018px){
+            flex: 0 1 300px;
+        }
+    }
+    // .operation-block__image
+    &__image {
+        position: relative;
+        padding: 0 0 165.43% 0;
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    // .operation-block__buttons
+    &__buttons {
+    }
+    // .operation-block__button
+    &__button {
+    }
+}
+.button {
+    // .button_blue
+    &_blue {
+        font-weight: 400;
+        background: transparent;
+        border: 2px solid #3BA3FF;
+        color: #3BA3FF;
+        transition: all 0.3s linear 0s;
+        @media (any-hover: hover){
+            &:hover{
+                background: #FF00D6;
+                border: 2px solid #FF00D6;
+                color: #fff;
+            }
+        }
+    }
+}
